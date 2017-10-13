@@ -1,0 +1,20 @@
+<h1>All Kittens</h1>
+
+<% @kittens.each do |kitten| %>
+	<h3><%= link_to kitten.name, kitten %></h3>
+	<table>
+		<tr>
+			<td><strong>Age: </strong></td>
+			<td><%= kitten.age %></td>
+		</tr>
+		<tr>
+			<td><strong>Cuteness: </strong></td>
+			<td><%= kitten.cuteness %></td>
+		</tr>
+		<tr>
+			<td><strong>Softness: </strong></td>
+			<td><%= kitten.softness %></td>
+		</tr>
+	</table>
+	<small><%= link_to "(delete)", kitten, method: :delete %></small>
+<% end %>

@@ -1,0 +1,16 @@
+<%= form_for(@kitten) do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :age %>
+	<%= f.select :age, @age %>
+	<br>
+	<%= f.label :cuteness, "How cute is the kitten? (1: not cute, 10: OMG the CUTEST kitten EVER!!!)" %>
+	<%= f.select :cuteness, @cuteness %>
+	<br>
+	<%= f.label :softness, "How soft is the kitten? (1: not soft, 10: OMG the SOFTEST kitten EVER!!!)" %>
+	<%= f.select :softness, @softness %>
+	<br>
+	<%= f.submit %>
+
+<% end %>
